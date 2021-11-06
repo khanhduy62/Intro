@@ -1,6 +1,10 @@
+import { useState } from 'react';
+import PortfolioList from '../portfolioList/PortfolioList';
 import './portfolio.scss';
 
 const Portfolio = () => {
+  const [selected, setSelected] = useState('featured');
+
   const list = [
     {
       id: 'featured',
@@ -28,11 +32,15 @@ const Portfolio = () => {
     <div className='portfolio' id='portfolio'>
       <h1>Portfolio</h1>
       <ul>
-        <li className='active'>Featured</li>
-        <li>Web App</li>
-        <li>Mobile App</li>
-        <li>Design</li>
-        <li>Content</li>
+        {list.map((item) => (
+          <PortfolioList
+            key={item.id}
+            title={item.title}
+            active={selected === item.id}
+            setSelected={setSelected}
+            id={item.id}
+          />
+        ))}
       </ul>
       <div className='container'>
         <div className='item'>
