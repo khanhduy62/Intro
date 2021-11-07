@@ -18,14 +18,6 @@ const Portfolio = () => {
       id: 'mobile',
       title: 'Mobile App',
     },
-    {
-      id: 'design',
-      title: 'Design',
-    },
-    {
-      id: 'content',
-      title: 'Content',
-    },
   ];
 
   return (
@@ -48,12 +40,12 @@ const Portfolio = () => {
           <h3>Ecommerce App</h3>
         </div>
         <div className='item'>
-          <img src='assets/app-1.png' alt='icon' />
-          <h3>Ecommerce App</h3>
+          <img src='assets/app-2.png' alt='icon' />
+          <h3>Medication App</h3>
         </div>
         <div className='item'>
-          <img src='assets/app-1.png' alt='icon' />
-          <h3>Ecommerce App</h3>
+          <img src='assets/app-3.png' alt='icon' />
+          <h3>Chat App</h3>
         </div>
       </div>
     </div>
