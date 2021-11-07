@@ -9,7 +9,7 @@
     top: $topbarHeight;
     background-color: lightsalmon;
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+    // scroll-snap-type: y mandatory;
     scrollbar-width: none; //for firefox
     &::-webkit-scrollbar {
       display: none;
@@ -18,7 +18,7 @@
     > * {
       width: 100vw;
       height: calc(100vh - #{$topbarHeight});
-      scroll-snap-align: start;
+      // scroll-snap-align: start;
     }
   }
 }
