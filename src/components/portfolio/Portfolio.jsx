@@ -23,7 +23,7 @@ const Portfolio = () => {
   return (
     <div className='portfolio' id='portfolio'>
       <h1>Portfolio</h1>
-      <ul>
+      {/* <ul>
         {list.map((item) => (
           <PortfolioList
             key={item.id}
@@ -33,7 +33,7 @@ const Portfolio = () => {
             id={item.id}
           />
         ))}
-      </ul>
+      </ul> */}
       <div className='container'>
         <div
           className='item'
