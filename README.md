@@ -25,3 +25,8 @@ forever list
 ### - `stop the daemon SCRIPT by Id|Uid|Pid|Index|Script`
 
 forever stop `<Pid>`
+
+# using docker
+follow the [link](https://mherman.org/blog/dockerizing-a-react-app/)
+- docker-compose down
+- docker-compose up
