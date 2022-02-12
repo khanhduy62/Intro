@@ -1,0 +1,27 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+          cache: "yarn"
+      - name: build and deploy site
+        run: |
+          yarn install
+          yarn build
+          mkdir ~/.ssh
+          echo "$my_ssh_key" > ~/.ssh/gh_actions_key
+          chmod 600 ~/.ssh/gh_actions_key
+          rsync -avzr --delete -e "ssh -i ~/.ssh/gh_actions_key -o StrictHostKeyChecking=no" build/ ${{ secrets.USER }}@${{ secrets.HOST }}:/home/${{ secrets.USER }}/Intro/build/
+        env:
+          my_ssh_key: ${{ secrets.SSH_KEY }}
