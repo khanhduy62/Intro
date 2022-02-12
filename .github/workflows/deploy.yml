@@ -24,4 +24,5 @@ jobs:
           chmod 600 ~/.ssh/gh_actions_key
           rsync -avzr --delete -e "ssh -i ~/.ssh/gh_actions_key -o StrictHostKeyChecking=no" build/ ${{ secrets.USER }}@${{ secrets.HOST }}:/home/${{ secrets.USER }}/Intro/build/
         env:
+          CI: false
           my_ssh_key: ${{ secrets.SSH_KEY }}
