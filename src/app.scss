@@ -1,12 +1,10 @@
 @import 'global';
 
-.app {
-  height: 100vh;
+.appContainer {
+  overflow-y: scroll;
   .sections {
     width: 100%;
-    height: calc(100vh - #{$topbarHeight});
-    position: relative;
-    top: $topbarHeight;
+    margin-top: $topbarHeight;
     background-color: lightsalmon;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
